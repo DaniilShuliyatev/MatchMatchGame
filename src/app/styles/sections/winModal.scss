@@ -1,0 +1,63 @@
+.win-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba( 0, 0, 0, 0.5);
+
+    &_wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 45vw;
+        height: 35vh;
+        background-color: var(--third-color);
+        border: 4px solid var(--primary-color);
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        gap: 2vh;
+        animation: openModal;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+    }
+    &-close {
+        width: 14vw;
+        height: 8vh;
+        background-color: var(--secondary-color);
+        border: 1px solid var(--primary-color); 
+    }
+    &_close-animation {
+        animation: closeModal;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+    }
+    &_icon {
+        background-color: var(--third-color);
+    }
+    &_new-record {
+        font: var(--font-xl);
+        color: #62C370;
+        background-color: var(--third-color);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        transform: scale(1, 1) translate(-50%, -50%);
+    }
+    100% {
+        transform: scale(0.3, 0.3) translate(25%, 25%);
+    }
+}
+
+@keyframes openModal {
+    0% {
+        transform: scale(0.3, 0.3) translate(-25%, -25%);
+    }
+    100% {
+        transform: scale(1, 1) translate(-50%, -50%);
+    }
+}
