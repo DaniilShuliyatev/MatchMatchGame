@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/app/assets/svg/card.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/app/styles/index.scss">
+    <title>Match - Match game</title>
+  </head>
+  <body class="light">
+    <header>
+      <h1>
+        Match - Match game
+      </h1>
+      <button class="theme-switcher">
+        <img src="./src/app/assets/svg/sun.svg" alt="light theme">
+      </button>
+    </header>
+    <!-- start page -->
+    <section class="game-enter">
+      <h2 class="game-enter_header">Choose the difficulty</h2>
+      <div>
+        <button data-level="easy" class="game-enter_button game-enter_button_easy">Easy</button>
+        <button data-level="normal" class="game-enter_button game-enter_button_normal">Normal</button>
+        <button data-level="hard" class="game-enter_button game-enter_button_hard">Hard</button>
+      </div>
+    </section>
+    <!-- game page -->
+    <section class="game-page">
+      <button class="game-page_back">
+        <img src="./src/app/assets/svg/back-icon.svg" alt="back">
+      </button>
+      <div class="game-page_counter">Flips count: 0</div>
+      <div class="game-page_record"></div>
+      <div class="game-page_wrapper">
+      </div>
+    </section>
+    <!-- win modal -->
+     <dialog class="win-modal">
+        <div class="win-modal_wrapper">
+          <div class="win-modal_new-record"></div>
+          <img src="/src/app/assets/svg/IconArchievement.svg" alt="Cup" class="win-modal_icon"/>
+          <button class="win-modal-close">
+            Go back
+          </button>
+        </div>
+     </dialog>
+    <script type="module" src="/src/app/main.ts"></script>
+  </body>
+</html>
